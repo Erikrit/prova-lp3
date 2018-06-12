@@ -1,0 +1,57 @@
+<div class="container">
+  <form [formGroup]="entityGrup">
+    <div class="row">
+  <div class="form-group">
+    <div class="col-sm">
+    <label for="cpf">Cpf</label>
+      <input type="text" class="form-control" id="cpf" formControlName="cpf">
+      </div>
+      <div class="col-sm-12">
+    <label for="nome">Nome Completo
+      
+    </label>
+
+    <input type="text" class="form-control" id="nome" formControlName="name">
+  </div>
+  </div>
+  </div>
+</div>
+  <div class="row">
+      <div class="form-group">
+          <div class="col-sm-4">
+          <label for="nomeP">Nome Completo Pai</label>
+            <input type="text" class="form-control" id="nomeP" formControlName="nameP">
+          </div>
+          <div class="col-sm-6">
+          <label for="nomeM">Nome Completo mae
+      
+          </label>
+          <input type="text" class="form-control" id="nomeM" formControlName="nameM">
+
+          <button type="button" class="btn btn-primary btn-lg btn-block" (click)="salvar($event)">Salvar</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block">Cancelar</button>
+
+
+</div>
+</div>
+</div>
+</form>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Cpf</th>
+        <th scope="col">Nome Completo</th>
+        <th scope="col">Nome da Mae</th>
+        <th scope="col">Nome do pai</th>
+        <th scope="col">Remover</th>
+      </tr>
+    </thead>
+    <tbody *ngFor"let user of Entity ">
+      <tr>{user.cpf}</tr>
+      <tr>{user.nome}</tr>
+      <tr>{user.nomeP}</tr>
+      <tr>{user.nomeM}</tr>
+      </tr>
+    </tbody>
+  </table>
